@@ -1,0 +1,50 @@
+html {
+  font-family: "Open Sans";
+}
+
+#navbar{
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #64CEBE;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    padding-top: 20px;
+    text-align:center;
+}
+
+@media (min-width: 1000px) {
+    #main-doc {font-size: 18px;}
+
+
+#title {
+  font-size:  50px;
+}
+
+.nav-link{
+  font-size: 20px;
+}
+
+#main-doc {
+    margin-left: 315px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+}
+
+header {
+  font-size: 30px;
+}
+
+#code{
+  padding: 20px;
+  background-color: #e6e8ed;
+}
+
+  #subSec{
+    font-size: 18pt;
+  }
+
+  a{
+    color: #64CEBE;
+  }

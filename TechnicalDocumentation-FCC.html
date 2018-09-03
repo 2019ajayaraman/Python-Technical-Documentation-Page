@@ -1,0 +1,211 @@
+<!-- Python -->
+<DOCTYPE! html>
+<html>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+
+  <nav id="navbar">
+    <header style="font-size: 30px;">Introduction to Python</header>
+    <br>
+    <hr>
+    <a style="color: white;" href="#Downloads" class="nav-link">Downloads</a>
+    <br>
+    <hr>
+    <a style="color: white;" href="#Boolean" class="nav-link">Boolean</a>
+    <br>
+    <hr>
+    <a style="color: white;" href="#Loops" class="nav-link">Loops</a>
+    <br>
+    <hr>
+    <a style="color: white;" href="#Files" class="nav-link">Files</a>
+    <br>
+    <hr>
+    <a style="color: white;" href="#Running" class="nav-link">Running</a>
+    <br>
+    <hr>
+  </nav>
+
+  <main id="main-doc">
+    <header id="title"> Introduction to Python </header>
+    <br>
+    <p>This documentation page will hopefully help you get started on your Python journey! Use the side bar to navigate the different sections of this page. Scroll below to get started!
+
+    <hr>
+    <section class="main-section" id="Downloads">
+      <header>Downloads</header>
+      <p> When you are starting out, the most important step is to download the correct programs and software. First, make sure you have the correct python version. Most computer come with 2.7 but that is widely outdated. Download the newest release <a href="https://www.python.org/downloads/">here</a> (python 3). </p>
+      <p>Now that you have that you have the lastest version of pythn installed, you need to find a programming platform to use. There are a variety of different ones you can use. PyCharm is great for beginners because it comes with its own compiler and has a full IDE. You can also try out text editors like Atom or Sublime. Another option is just creating a text file and using the command line to run the program. Whatever option you choose, just undersand that each comes with its own pros and cons. Below is a list with links to their websites:</p>
+      <li><a href="https://www.jetbrains.com/pycharm/">PyCharm</a></li>
+      <li><a href="https://atom.io/">Atom</a></li>
+      <li><a href="https://www.sublimetext.com/">Sublime</a></li>
+
+      <p>Make sure you download all the necessary software before continuing.</p>
+    </section>
+    <hr>
+
+    <section class="main-section" id="Boolean">
+      <header>Boolean</header>
+      <p>To understand basic python code, it is important to first understand boolean operators. Fortunately, rather than using &&, !, and || like in Java, python is meant to be a readable language so it uses and, not, and or respectively. Additionally, our boolean values are capitalized. Let's take a look at some examples: </p>
+      <div id="code">
+      <code>
+        b1 = True
+        <br>
+        b2 = False
+      </code>
+      </div>
+      <p> We see that b1 is set to the value True and b2 is set to the value False. Now let's take a look at how why can apply operations on these values to create different boolean values. </p>
+      <div id="code"><code>
+        b1 and b2  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>#True and False --> False</em>
+        <br>
+        b1 or b2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>#True or False --> True</em>
+        <br>
+        not b1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>#not True --> False</em>
+        <br>
+        not (b2 or (b1 and b2)) <em>#False</em>
+      </code></div>
+      <p>Study the rules above and you will be able to master boolean logic in no time. It just takes a bit of practice. To recap, the boolean operators that will be most important for python beginners are:</p>
+      <li>and</li>
+      <li>or</li>
+      <li>not</li>
+      <p>Understanding boolean logic will be very important for the next section so make sure you understand it before continuing.</p>
+    </section>
+    <hr>
+
+    <section class="main-section" id="Loops">
+      <header>Loops</header>
+      <p>As stated above, loops NEED boolean logic to work. This logic allows the loops to understand how many times and when to repeat. We will be dealing with while and for loops in this section.</p>
+      <div id="subSec">While-Loops</div>
+      <p>While-loops are the easier of the two. With simple syntax, all you have to write is 'while' and the boolean condition that you would like it to satisfy. When iterating with a while loop, be sure to increment the value within the body of the loop so you do not end up with an infinite loop. Let's take a look</p>
+       <div id="code"><code>
+         increm = 0
+         while increm < 5: <br>
+         &nbsp;&nbsp;print increm <br>
+         &nbsp;&nbsp;increm += 1
+         </code></div>
+      <p>This code prints the values of 0 through 5 because it iterates through the loop until iter is no loner less than 5. In other words, the code exits the loop once the value of iter becomes 5. Let's take a look at another example.</p>
+      <div id="code"><code>
+        while True:<br>
+        &nbsp;&nbsp;print "Hello World!"
+        </code></div>
+      <p>This code prints "Hellow World" an infinte number of times because the condition is always True. If we wanted to exit the loop, we would have to put a <code>break</code> inside the while-loop.</p>
+      <br>
+      <div id="subSec">For-Loops</div>
+      <p>It is no suprise that for-loops are harder to understand in comparison to while-loops. The discrepancy in difficulties is due to how we must setup the boolean condition within the for-loop. First, we must define a for-loop. A for-loop is a loop that increments a fixed number of times. Rather than satisfying any condition, the for-loop is used when you know how many times you want to repeat a process. With for-loops, we will be using the <code>range()</code> and the <code>in</code> functions.</p>
+      <p>The <code>range()</code> function has three parameters: starting value, ending value (exclusive), and step, in that order. Let's take a look at how this works.
+        <div id="code"><code>
+          for i in range(0, 7, 2):
+          <br>&nbsp;&nbsp;print i
+          </code></div>
+      <p>Did you notice how we added the <code>in</code> function? Essentially, on each turn of the loop, the varaible i is set to the sequential number in the range, which in this case is 1-6 since the ending number is exclusive. However, since we set the step = 2, we added an additional qualification: every other number is printed. This means that i equals 0, 2, 4, and 6 depending on which iteration of the loop the code is on.</p>
+      <p>To recap, we discussed the following concepts about loops:</p>
+      <div style="line-height:30px;">
+      <li>
+        While-loops
+        <ul style="margin-top:-4px; margin-bottom:-4px;">
+          <li>break</li>
+        </ul>
+      </li>
+      <li>
+        For-loops
+        <ul style="margin-top:-4px; margin-bottom:-4px;">
+          <li>range (start, end, step)</li>
+          <li>in</li>
+        </ul>
+      </li>
+      </div>
+      <p>Loops are the meat of coding so now that we have gotten that out of the way, we can talk about a bit more advanced principles.</p>
+    </section>
+    <hr>
+
+    <section class="main-section" id="Files">
+      <header>Files</header>
+      <p>When talking about files, we are talking about text files that we can read data from, that we can create, or that we can edit using python. </p>
+      <p>To start off, we must open up the textfile we want. Please note, this textfile need not exist prior to executing the code. If it doesn't exist, your computer will create a blank textfile under the name you enter. However, this really only works when you want to create a textfile. Otherwise, your computer will throw an error if you attempt to read date AND do something with it as the data is nonexistent. To open a file, use the following code:</p>
+      <div id="code"><code>
+        file = open("<em>filename.txt</em>", <em>setting</em>)
+        </code></div>
+      <p>In the code above, we are opening a file with the name "filename" and the settings setting. It is important to include '.txt' with your filename to ensure that the code opens the correct document and does not throw an error. We will discuss settings more below.</p>
+
+      <header id="subSec">Reading</header>
+      <p>With reading, the setting is 'r'. This gives the file object the functionality of being read using different methods. These methods include read(), readline()), and readlines().</p>
+      <li><code>.read()</code> will return a large string of the entire document. To deal with smaller parts of this string, you would need to be able to parse the string into lines and then even further into words or even characters.</li>
+      <li><code>.readline()</code>returns one line at a time. Every time you apply this method to the file object, a single line is returned. This object is best used with a while-loop since we don't know how many lines there will be in the document.</li>
+      <li><code>.readlines()</code> returns a list of strings for each of the lines in the textfile. At each index, there is a differnt line. To iterate through all the lines using this method, a for-loop is best used because we know the length of the list already.</li>
+      <p>Let's take a look at all of the examples below:</p>
+       <div id="code"><code>
+         file = open("filename.txt", 'r')
+         <br><br>
+         <em>#printing file after reading with .read()</em><br>
+         readFile = file.read()<br>
+         print (readFile)
+
+         <br><br>
+         <em>#printing file after reading with .readline()</em><br>
+         readLine = file.readline()<br>
+         while readLine:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>#This test to see if the current line has any content so now error is thrown </em> <br>
+         &nbsp;&nbsp;print (readLine)<br>
+         &nbsp;&nbsp;readLine = file.readLine() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>#This iterates to the next line in the file</em>
+
+
+         <br><br>
+         <em>#printing file after reading with .readlines()</em><br>
+         readLines = file.readlines()<br>
+         for line in readlines:
+         &nbsp;&nbsp;print (line)
+         </code></div>
+
+      <p>All of the code above accomplished the same task: printing out the entire textfile after reading, or iterating, through it. Let's move on to writing text files.</p>
+
+      <header id="subSec">Writing</header>
+      <p>Let's say that you have to save the output your code submits on a textfile. To do this, we must first set the stting to 'w' for write. Unlike with reading, there is really only once simple method for writing. Also note that if you use a preexisting textfile, this function will write over any data already stored. This means you will lose any past data you might need. Check before attempting to use this function.</p>
+      <p>The only function that will be used is the .write() function, which overwrites the entire document. Let's take a look:</p>
+       <div id="code"><code>
+         file = open("filename.txt", 'w')
+         <br><br>
+         file.write("I am writing this to filename.txt")
+         </code></div>
+      <p>If you were to run the code above and then open filename.txt, you would notice that the entire document would contain the line "I am writing this to filename.txt".</p>
+      <p>Now let's take a look at our final subsection for files: editing.</p>
+
+      <header id="subSec">Editing</header>
+      <p>In the previous subsection, we talked about writing to files and how they overwrite text. But what if we wanted to only add text? We can do this by using the append function, with which the setting must be set to 'a'. This will allow us to keep prior data while also recording new data.</p>
+      <p>When we open the file in this manner (with 'a'), we can just use the same .write() function as above.</p>
+
+      <br>
+      <p>Closing document are equally as imporant as opening them. If you do not close a document, you migth get a later on, generally due to the overload of data in the server. After you have processed all the data needed, add the line <code>file.close()</code> to close the textfile.</p>
+      <p>Although the concept of textfiles might seem complex and a bit arbitrary, they come in handy whenw riting longer and more advanced programs. To recap, we covered the following in this section:</p>
+      <div style="line-height: 30px;">
+      <li>Reading files</li>
+      <ul style="margin-top:-4px; margin-bottom:-4px;">
+        <li>.read()</li>
+        <li>.readline()</li>
+        <li>.readlines()</li>
+      </ul>
+      <li>Writing files</li>
+      <li>Editing (or appending) files</li>
+      </div>
+      <p>Let's now move on to actually executing our code</p>
+
+    </section>
+    <hr>
+
+    <section class="main-section" id="Running">
+      <header>Running</header>
+      <p>We have reached our final section! Running code is actually quite simple. Unlike programming languages like Java, there is no need to create any methods, although you could. You simply must just write anything you want to run in the file, click run, and watch your code work its magic.</p>
+      <p>However, this method is only best when you are using simple code. With complex code and large projects, it is best to keep all of your code in methods. In this case, use the following code:</p>
+       <div id="code"><code>
+         if __name__ == "__main__": <br>
+         &nbsp;&nbsp;main()
+         </code></div>
+      <p>This code above tests to see if the program is running and if so, allows the program to call main(), another method that must be initialized before running the code. To so, simply enter <code>main():</code> and start to enter code in an indented fashion underneath it. Be sure, however, that the entire main() method is above the call to main(). It helps with running and debugging if this is the case.</p>
+    </section>
+    <hr>
+
+    <p>Now you know some of the basics of python so go apply your knowledge. For more information, visit the <a href="https://docs.python.org/3/">official Python 3.7.0 Documentation</a>. <br><br> <div style="text-align: center;">Happy coding!<div></p>
+
+
+  </main>
+
+  </html>
